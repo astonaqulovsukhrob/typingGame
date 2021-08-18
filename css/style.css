@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 0 10px #000;
+  z-index: 10;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* nav */
+.nav-div {
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav h1 {
+  font-size: 25px;
+}
+
+.nav-ul li {
+  display: inline-block;
+}
+
+.nav-ul li a {
+  outline: none;
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* header-container */
+.header-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+select {
+  display: block;
+  appearance: none;
+  padding: 8px;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+ }
+ 
+.selcet-container {
+  width: 160px;
+  margin: auto;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+}
+ 
+.selcet-container::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  background-color: rgb(49, 247, 247);
+  pointer-events: none;
+}
+
+.score {
+  text-align: center;
+  font-size: 25px;
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 350px;
+  gap: 25px;
+}
+
+.input {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+  font-size: 16px;
+}
+
+.word, .time {
+  font-size: 22px;
+}
+
+.bars {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  background: rgba(0, 0, 0, .3);
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none ;
+}
+
+/* reponsive nav */
+.nav-res {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  border-right: 2px solid #fff;
+  background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );
+  z-index: 2;
+}
+
+.nav-res h1 {
+  padding: 5px;
+}
+
+.nav-res ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ul-nav li {
+  list-style: none;
+  text-align: left;
+  height: 50px;
+  padding: 5px;
+  border-bottom: 2px solid #fff;
+}
+
+.ul-nav li a {
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.times {
+  position: absolute;
+  right: 10px;
+  top: 22px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: aqua;
+  outline: none;
+}
+
+.hidden2 {
+  display: none;
+}
+
+.img1 {
+  position: absolute;
+  height: 220px;
+  width: 200px;
+  left: 15px;
+  top: 5px;
+  z-index: -10;
+  transform: rotate(55deg);
+}
+
+.img1 {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);;
+  background-color: brown;
+}
+
+.img2 {
+  position: absolute;
+  height: 220px;
+  width: 200px;
+  right: 10px;
+  top: 20px;
+  transform: rotate(20deg);
+  z-index: -20;
+}
+
+.img2 {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-color: rgb(255, 217, 0);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram, .telegram, .github {
+  background-color: #fff;
+  height: 45px;
+  width: 45px;
+  margin: 0 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  justify-content: center;
+  transition: 0.8s;
+}
+
+.instagram a {
+  color: brown;
+}
+
+.telegram a {
+  color: blue;
+}
+
+.github a {
+  color: #000;
+}
+
+.instagram:hover, .telegram:hover, .github:hover {
+  box-shadow: 0 0 10px 5px #fff;
+  background-color:#eee;
+  transform: translateY(-10px);
+}
+
+
+
+
+@media (max-width: 768px) {
+  .hidden1 {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+  }
+}
