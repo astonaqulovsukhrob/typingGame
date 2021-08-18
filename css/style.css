@@ -9,10 +9,10 @@ body {
   margin: 0;
   background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
   color: white;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 #section {
@@ -37,7 +37,7 @@ body {
 }
 
 .nav h1 {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .nav-ul li {
@@ -64,7 +64,7 @@ select {
   appearance: none;
   padding: 8px;
   width: 100%;
-  font-size: 15px;
+  font-size: 18px;
   cursor: pointer;
   border: none;
   outline: none;
@@ -88,11 +88,12 @@ select {
   padding: 5px;
   background-color: rgb(49, 247, 247);
   pointer-events: none;
+  border-radius: 0 5px 5px 0;
 }
 
 .score {
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .game-container {
@@ -100,7 +101,7 @@ select {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 350px;
+  min-height: 260px;
   gap: 25px;
 }
 
@@ -109,11 +110,13 @@ select {
   border: none;
   padding: 10px 15px;
   outline: none;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .word, .time {
   font-size: 22px;
+  font-weight: 600;
 }
 
 .bars {
@@ -126,6 +129,12 @@ select {
   color: #fff;
   cursor: pointer;
   display: none ;
+  transition: transform .5s;
+}
+
+.bars:hover {
+  transform: rotate(160deg);
+  color: rgb(255, 255, 255);
 }
 
 /* reponsive nav */
@@ -138,6 +147,13 @@ select {
   border-right: 2px solid #fff;
   background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );
   z-index: 2;
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+}
+
+.activ {
+  transform: translateX(0%);
+
 }
 
 .nav-res h1 {
@@ -173,40 +189,12 @@ select {
   border: none;
   background-color: aqua;
   outline: none;
+  transition: transform 0.5s;
 }
 
-.hidden2 {
-  display: none;
-}
-
-.img1 {
-  position: absolute;
-  height: 220px;
-  width: 200px;
-  left: 15px;
-  top: 5px;
-  z-index: -10;
-  transform: rotate(55deg);
-}
-
-.img1 {
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);;
-  background-color: brown;
-}
-
-.img2 {
-  position: absolute;
-  height: 220px;
-  width: 200px;
-  right: 10px;
-  top: 20px;
-  transform: rotate(20deg);
-  z-index: -20;
-}
-
-.img2 {
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  background-color: rgb(255, 217, 0);
+.times:hover {
+  transform: rotate(100deg);
+  color: rgb(255, 255, 255);
 }
 
 footer {
@@ -225,7 +213,7 @@ footer {
   align-items: center;
   font-size: 22px;
   justify-content: center;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .instagram a {
@@ -246,8 +234,49 @@ footer {
   transform: translateY(-10px);
 }
 
+/* modal  */
+.modal {
+  background-color: rgba(189, 189, 189, 0.5);
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 25px;
+  color: aqua;
+  z-index: 100;
+}
 
+#lastScore {
+  font-size: 20px;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 80;
+  backdrop-filter: blur(4x);
+}
+
+.agin {
+  padding: 5px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .hidden1 {
